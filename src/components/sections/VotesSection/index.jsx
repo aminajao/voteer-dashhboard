@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+const axios = require("axios");
 
 export default function VotesSection() {
 	const positions = ["President", "Vice President", "PRO"];
@@ -39,7 +40,27 @@ export default function VotesSection() {
 			},
 		];
 
-		console.log(formData);
+		// prettier-ignore
+		const finalData = {
+			vote_type: "Faculty",
+			department_name: "ece",
+			faculty_name: "law",
+			email: "aminajao96@gmail.com",
+			password: "11111111",
+			votingDetails: formData,
+		};
+
+		axios
+			.post(
+				"https://lasu-voter.herokuapp.com/api/v1/admin/vote",
+				finalData
+			)
+			.then(function (response) {
+				console.log(response);
+			})
+			.catch(function (error) {
+				console.log(error.message);
+			});
 	};
 
 	return (

@@ -1,7 +1,7 @@
 import React from "react";
 import VotesSection from "../../components/sections/VotesSection";
 
-export default function Dashboard({ toggle }) {
+export default function Dashboard({ toggle, loginData }) {
 	return (
 		<div className="dashboard">
 			<nav>
@@ -10,7 +10,7 @@ export default function Dashboard({ toggle }) {
 				<button onClick={toggle}>Log out</button>
 			</nav>
 
-			<VotesSection />
+			<VotesSection loginData={loginData} />
 		</div>
 	);
 }

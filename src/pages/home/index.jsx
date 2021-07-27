@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Home({ isLoggedIn, toggle }) {
+export default function Home({ toggle }) {
 	const [formData, setFormData] = useState([]);
 
 	const handleInputChange = (e) => {
@@ -12,8 +12,8 @@ export default function Home({ isLoggedIn, toggle }) {
 			formData.email === "aminajao96@gmail.com" &&
 			formData.password === "11111111"
 		) {
-			toggle();
-			// localStorage.setItem("authenticated", true);
+			// toggle();
+			localStorage.setItem("authenticated", true);
 		}
 	};
 
