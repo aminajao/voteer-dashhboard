@@ -18,7 +18,7 @@ export default function Home({ isLoggedIn, toggle }) {
 	};
 
 	return (
-		<div className="container">
+		<div className="home container">
 			<form onSubmit={handleFormSubmit}>
 				<h1>Admin Login</h1>
 

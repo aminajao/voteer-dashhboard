@@ -15,7 +15,7 @@ function App() {
 			{!isLoggedIn ? (
 				<Home isLoggedIn={isLoggedIn} toggle={toggle} />
 			) : (
-				<Dashboard />
+				<Dashboard toggle={toggle} />
 			)}
 		</div>
 	);
